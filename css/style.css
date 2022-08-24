@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Rock+Salt&display=swap');
+
+:root{
+    --light-color: #fff;
+    --dark-color: #171721;
+    --dark-color-lighter: #7e8299;
+    --accent-color: #22beaa;
+    --body-background-color: #202020;
+    --border-botom-color: rgba(255,255,255,0.5);
+    --transparent-butten-color: rgba(255,255,255,1);
+    --font-size-small: 1.4rem;
+    --font-size-normal: 1.6rem;
+    --font-size-medium: 2rem;
+    --font-size-large: 2.4rem;
+    --font-family: 'Poppins', sans-serif;
+    --margin-small: 1rem;
+    --margin-medium: 1.5rem;
+    --gap-small: 1rem;
+    --gap-medium: 2.5rem;
+}
+
+.theme-light{
+    --light-color:#171721;
+    --dark-color:#fff;
+    --dark-color-lighter: #7e8299;
+    --body-background-color: #eef0f8;
+    --border-botom-color: rgba(23,23,23,0.5);
+    --transparent-button-color: var(--accent-color);
+}
+    h1{
+        color:crimson;
+        font-style: italic;
+        font-size: 100px;
+    }
+    h2{
+        color: rgb(1, 167, 167);
+        font-style:oblique;
+    }
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        font-family: var(--font-family);
+        font-size: var(--font-size-normal);
+        color: var(--light-color);
+        line-height: 1.5;
+        background-color: var(--body-background-color);
+    }
+
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+
+    }
+    img{
+        max-width: 100%;
+        display: block;
+    }
+
+    button{
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+        border: none;
+        border-radius: .4rem;
+        cursor: pointer;
+    }
+
+    i{
+        font-size: var(--font-size-large);
+        line-height: 0;
+    }
+
+    .container{
+        max-width: 134rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .place-item-center{
+        margin-right: auto;
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .d-grid{
+        display: grid;
+    }
+
+    .floating-background-image{
+        height: 120rem ;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .floating-background-image img{
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .header{
+        background-color: var(--dark-color);
+    }
+
+    .nav{
+        height: 6rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo{
+        font-family: 'Rock Salt', cursive;
+        font-weight: bold;
+        font-size: var(--font-size-medium);
+    }
+
+    .align-right{
+        margin-left: auto;
+        margin-left: absolute;
+        background-color: var(--accent-color);
+        border-radius: .4rem;
+    }
+
+    .icon-btn{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .theme-dark-icon{
+        display: none;
+    }
+
+    .nav-mobile{
+        width: 100%;
+        height: 100vh;
+        background-color: var(--light-color);
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 2.5rem;
+        transform: translateX(-105%);
+        z-index: 999;
+        transition: transform .5s;
+    }
+
+    .list{
+        display: none;
+        flex-direction: column;
+        gap: var(--gap-small);
+    }
+
+    .list-link{
+        display: inline-block;
+        font-size: var(--font-size-small);
+        color: var(--dark-color-lighter);
+        padding: 1rem 1.5rem;
+    }
+
+    .current{
+        color: var(--dark-color);
+    }
+
+    .menu-toggle-close{
+        background-color: var(--body-background-color);
+        position: absolute;
+        top: 2.0rem;
+        right: 3.0rem;
+    }
+
+    .dropdown-menu{
+        background-color: #eef0f8;
+        gap: 0;
+        margin-left: 1.5rem;
+        transform: translateY(-3px);
+        height: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: transform .5s;
+    }
+
+    .dropdown > .list-link i{
+        transition: transform .25s;
+    }
+
+    .nav-mobile.active{
+        transform: translateX(0);
+    }
+    .theme-light .theme-dark-icon{
+        display: block;
+    }
+    .theme-light .theme-light-icon{
+        display: none;
+    }
+    .dropdown.active > .list-link i{
+        transform: rotate(90deg);
+    }
+
+    .dropdown.active .dropdown-menu{
+        height: initial;
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
