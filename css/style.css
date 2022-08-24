@@ -210,3 +210,14 @@
         pointer-events: auto;
     }
 
+
+    .mid{
+        font-family: 'Poppins', sans-serif;
+        font-size: 160%;
+        font-weight: bold;
+        margin-left: 40%;
+        margin-top: 20%;
+    }
+
+
+
