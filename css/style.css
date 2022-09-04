@@ -94,6 +94,7 @@
     }
 
     .floating-background-image{
+        background-attachment: fixed;
         height: 120rem ;
         position: absolute;
         top: 0;
@@ -124,7 +125,7 @@
 
     .align-right{
         margin-left: auto;
-        margin-left: absolute;
+        margin-left: flex;
         background-color: var(--accent-color);
         border-radius: .4rem;
     }
@@ -152,7 +153,7 @@
     }
 
     .list{
-        display: none;
+        display: auto;
         flex-direction: column;
         gap: var(--gap-small);
     }
@@ -174,6 +175,8 @@
         top: 2.0rem;
         right: 3.0rem;
     }
+    
+    
 
     .dropdown-menu{
         background-color: #eef0f8;
@@ -209,15 +212,35 @@
         opacity: 1;
         pointer-events: auto;
     }
-
-
+    #user3line{
+       position: flex;
+        /* border: 5px solid; */
+    }
     .mid{
         font-family: 'Poppins', sans-serif;
         font-size: 160%;
         font-weight: bold;
         margin-left: 40%;
-        margin-top: 20%;
+        margin-top: 5%;
     }
 
+    .login{
+        margin-top: 5rem;
+        margin-left: 1rem;
+        
+    }
 
+    #fname{
+        margin-left: 1.5rem;
+        position: absolute;
+        
+    }
+    #lname{
+        margin-left: 2rem;
+        position: absolute;
+    }
 
+    #submit{
+        margin-left: 10rem;
+        position: absolute;
+    }
